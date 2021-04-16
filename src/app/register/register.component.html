@@ -1,0 +1,25 @@
+<div class="col-md-6 user-container">
+    <h2 class="text-center">Register</h2>
+    <form #Form1="ngForm"  (ngSubmit)="addCustomer(Form1)">
+      <div class="form-group">
+        <label for="name">User Name:</label>
+        <input type="text" [(ngModel)]="customer.name" placeholder="name" name="name" class="form-control" id="name" >
+      </div>
+    
+      <div class="form-group">
+        <label for="Password">Password</label>
+        <input  [(ngModel)]="customer.password" type="password" placeholder="password" name="password" class="form-control" id="password">
+      </div>
+      <div class="form-group">
+        <label for="Password">Email</label>
+        <input  [(ngModel)]="customer.email" type="email" placeholder="email" name="email" class="form-control" id="email">
+      </div>
+
+      <div class="form-group">
+        <label for="Password">Address</label>
+        <input  [(ngModel)]="customer.address" type="text" placeholder="address" name="address" class="form-control" id="address">
+      </div>
+
+      <input type="submit" value="Register" class="btn btn-success">
+    </form>
+  </div>
