@@ -3,9 +3,11 @@ import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { map } from 'rxjs/operators';
 
+
 export class User {
   email!: string;
   password!: string;
+  name!:string;
   constructor(public status: string,) { }
 }
 

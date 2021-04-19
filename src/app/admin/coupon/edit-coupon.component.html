@@ -1,0 +1,32 @@
+<p>edit-coupan works!</p>
+<div class="col-md-6 user-container">
+    <h2 class="text-center">Edit Coupon</h2>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+      <div class="hidden">
+        <input type="text" formControlName="id" placeholder="id" name="id" class="form-control" id="id" readonly="true">
+      </div>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" formControlName="name" placeholder="name" name="name" class="form-control" id="name" >
+      </div>
+  
+      
+      <div class="form-group">
+        <label for="Type">Type</label>
+        <input formControlName="type" placeholder="type" name="type" class="form-control" id="type">
+      </div>
+  
+      <div class="form-group">
+        <label for="Description">Description</label>
+        <input type="text" formControlName="description" placeholder="description" name="description" class="form-control" id="description">
+      </div>
+
+      <div class="form-group">
+        <label for="Price Discount">Price Discount</label>
+        <input type="text" formControlName="priceDiscount" placeholder="priceDiscount" name="priceDiscount" class="form-control" id="priceDiscount">
+      </div>
+      
+      <input type="submit" value="Update" class="btn btn-success">
+    </form>
+  </div>
+

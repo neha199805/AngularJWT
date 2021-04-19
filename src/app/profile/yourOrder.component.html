@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div *ngIf="customer.orders.length; else later">
+        <table border="1px">
+            <div>
+                <tr>
+                    <th>Order Id</th>
+                    <th>Ordered Items</th>
+                    <th>Quantity</th>
+                </tr>
+
+            </div>
+            <div *ngFor="let p of customer.orders">
+                <tr>
+                    <td>{{p.id}}</td>
+                    <td>{{p.cart}}</td>
+                </tr>
+
+            </div>
+        </table>
+    </div>
+    <ng-template #later>
+        <div>You don't have placed any order yet</div>
+    </ng-template>
+
+
+
+
+
+</div>

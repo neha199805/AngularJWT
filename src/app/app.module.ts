@@ -14,6 +14,13 @@ import { LogoutComponent } from './logout/logout.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminLoginComponent } from './login/adminlogin.component';
 import { AdminLogoutComponent } from './logout/adminlogout.component';
+import { CouponListComponent } from './coupon/coupon-list1.component';
+import { AdminCouponListComponent } from './admin/coupon/coupon-list.component';
+import { AdminEditCouponComponent } from './admin/coupon/edit-coupon.component';
+import { AdminAddCouponComponent } from './admin/coupon/add-coupon.component';
+import { EditProfileComponent } from './profile/edit-profile.component';
+import { ViewProfileComponent } from './profile/view-profile.component';
+import { YourOrderListComponent } from './profile/yourOrder.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +32,14 @@ import { AdminLogoutComponent } from './logout/adminlogout.component';
     LogoutComponent,
     AdminComponent,
     AdminLoginComponent,
-    AdminLogoutComponent
+    AdminLogoutComponent,
+    CouponListComponent,
+    AdminCouponListComponent,
+    AdminEditCouponComponent,
+    AdminAddCouponComponent,
+    EditProfileComponent,
+    ViewProfileComponent,
+    YourOrderListComponent
   ],
   imports: [
     BrowserModule,

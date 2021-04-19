@@ -1,0 +1,24 @@
+<p>coupan works!</p>
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+        <div class ="col">
+    <div class="card" >
+        <h5 class="card-header" style="background-color:dodgerblue" > CODE: {{coupon.name}}</h5>
+         <div class="card-body">
+            <h5 class="card-title" style="color:blue">{{coupon.type}}</h5>
+            <h6 class="card-subtitle" style="color:blueviolet">{{coupon.description}}</h6>
+            <p class="card-text" style="color:hotpink" >
+                Coupon id:{{coupon.id}}
+               </p>
+               <p class="card-text" style="color:blue">
+                Discount:{{coupon.priceDiscount}}
+               </p>
+               
+           </div>
+        <div class="card-footer" style="background-color:dodgerblue">
+           <button class= "btn-outline-success"(click)="onBack()">Back</button>
+     
+           </div>
+    </div>
+    </div>
+    </div>

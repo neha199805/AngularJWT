@@ -16,11 +16,19 @@ export class CustomerService{
     {
         const headers = new HttpHeaders({ Authorization: 'Bearer ' + sessionStorage.getItem('token') });
         console.log("test call");
-        return this.http.get<Customer[]>(this.backendUrl+'getAll');
+        return this.http.get<Customer[]>(this.backendUrl+'customers');
     }
 
     register(customer:Customer)
     {
         return this.http.post(this.backendUrl+'register',customer);
+    }
+
+    getCustomerByMail(email:string):Observable<Customer>{
+        return this.http.get<Customer>(this.backendUrl+'customers/email/'+email);
+    }
+
+    updateCustomerById(customer:Customer,id:number):Observable<Customer>{
+        return this.http.put<Customer>(this.backendUrl+'customers/'+id,customer)
     }
 }

@@ -1,0 +1,30 @@
+<div class="col-md-6 user-container">
+  
+    <h2 class="text-center">Add Coupon</h2>
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+        <label for="name">Coupon Name:</label>
+        <input type="text" formControlName="name" placeholder="name" name="name" class="form-control" id="name" >
+      </div>
+  
+      
+      <div class="form-group">
+        <label for="Type">Type</label>
+        <input formControlName="type" type="type" placeholder="type" name="type" class="form-control" id="type">
+      </div>
+  
+      <div class="form-group">
+        <label for="Description">Description</label>
+        <input type="text" formControlName="description" placeholder="description" name="description" class="form-control" id="description">
+      </div>
+
+      <div class="form-group">
+        <label for="Price Discount">Price Discount</label>
+        <input type="text" formControlName="priceDiscount" placeholder="priceDiscount" name="priceDiscount" class="form-control" id="priceDiscount">
+      </div>
+  
+      
+      <input type="submit" value="Add Coupon" class="btn btn-success">
+    </form>
+  </div>
+

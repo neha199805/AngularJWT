@@ -1,5 +1,7 @@
 import { Component, OnDestroy, OnInit } from "@angular/core";
 import { Subscription } from "rxjs";
+import { Cart } from "../cart/Cart";
+import { Order } from "../order/Order";
 import { CustomerService } from "../service/customer.service";
 import { Customer } from "./Customer";
 
@@ -11,6 +13,8 @@ export class CustomerComponent implements OnInit,OnDestroy{
 
     sub!:Subscription;
     customers:Customer[]=[];
+    orders:Order[]=[];
+    cart:Cart[]=[];
 
     constructor(private custService:CustomerService){}
 
