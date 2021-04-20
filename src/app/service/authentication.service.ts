@@ -46,13 +46,12 @@ export class AuthenticationService {
 
   isUserLoggedIn() {
     let user = sessionStorage.getItem('email')
-    console.log(user);
-    console.log(!(user === null))
     return !(user === null)
   }
 
   logOut() {
     sessionStorage.removeItem('email')
+    sessionStorage.removeItem('token')
   }
 
 }

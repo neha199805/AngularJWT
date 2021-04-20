@@ -1,50 +1,48 @@
-<p style="text-align:left">Coupan Card!!</p>
 <div class="container">
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-      <div class ="col">
-  <div class="card">
-      <h5 class="card-header" style="text-align:center">Coupon</h5>
-       <div class="card-body">
-      <p class="card-subtitle">Click on the button to manage coupons</p>
+    <div class="row row-cols-1 row-cols-md-2">
+        <div class="col mb-4">
+          <div class="card">
+            <h4 class="card-header" style="text-align: center;">Coupon</h4>
+            <div class="card-body">
+              <h3 class="card-title text-center">Click here to manage operations on coupons</h3>
+              <div class="card-footer">
+                <button class ="btn btn-lg btn-block btn-outline-info" (click)=gotocoupon()>Next</button>
+            </div>
+            </div>
           </div>
-      <div class="card-footer">
-         <button class ="btn btn-lg btn-block btn-outline-info" (click)=gotocoupon()>Next</button>
-  </div>
-  </div>
-  </div>
-  </div>
-
-<p style="text-align:left">Pizza Card!!</p>
-<div class="container">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-        <div class ="col">
-    <div class="card">
-        <h5 class="card-header" style="text-align: center;">Pizza</h5>
-         <div class="card-body">
-        <p class="card-subtitle">Click on the button to manage pizzas</p>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <h4 class="card-header" style="text-align: center;">Pizza</h4>
+            <div class="card-body">
+              <h3 class="card-title text-center">Click here to manage operations on pizzas</h3>
+              <div class="card-footer">
+                <button class ="btn btn-lg btn-block btn-outline-info" (click)=gotoPizza()>Next</button>
             </div>
-        <div class="card-footer">
-           <button class ="btn btn-lg btn-block btn-outline-info" (click)=gotocoupon()>Next</button>
-    </div>
-    </div>
-    </div>
-    </div>
-
-    <p style="text-align:left">Order Card!!</p>
-    <div class="container">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-        <div class ="col">
-    <div class="card">
-        <h5 class="card-header" style="text-align: center;">Order</h5>
-         <div class="card-body">
-        <p class="card-subtitle">Click on the button to manage orders</p>
             </div>
-        <div class="card-footer">
-           <button class ="btn btn-lg btn-block btn-outline-info" (click)=gotocoupon()>Next</button>
-  </div>
-    </div>
-    </div>
-    </div>
-  
-  
-
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <h4 class="card-header" style="text-align: center;">Order</h4>
+            <div class="card-body">
+              <h3 class="card-title text-center">Click on the next button to manage orders</h3>
+              <div class="card-footer">
+                <button class ="btn btn-lg btn-block btn-outline-info" (click)=goToOrder()>Next</button>
+       </div>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <h4 class="card-header" style="text-align: center;">Customer</h4>
+            <div class="card-body">
+              <h3 class="card-title text-center">Click on the next button to view customers</h3>
+              <div class="card-footer">
+                <button class ="btn btn-lg btn-block btn-outline-info" (click)=goToCustomer()>Next</button>
+       </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

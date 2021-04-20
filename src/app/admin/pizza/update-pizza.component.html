@@ -1,0 +1,42 @@
+<div class="col-md-6 user-container">
+  <h2 class="text-center">Edit Pizza</h2>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div class="hidden">
+      <input type="text" formControlName="id" placeholder="id" name="id" class="form-control" id="id" readonly="true">
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" formControlName="name" placeholder="name" name="name" class="form-control" id="name" >
+    </div>
+    
+    <div class="form-group">
+      <label for="Type">Type</label>
+      <input formControlName="type" placeholder="type" name="type" class="form-control" id="type">
+    </div>
+
+    <div class="form-group">
+      <label for="Description">Description</label>
+      <input type="text" formControlName="description" placeholder="description" name="description" class="form-control" id="description">
+    </div>
+
+    <div class="form-group">
+      <label for="imageUrl">ImageUrl</label>
+      <input type="text" formControlName="imageUrl" placeholder="imageUrl" name="imageUrl" class="form-control" id="imageUrl">
+    </div>
+    
+<form  [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <p>Costlist</p>
+    <div formArrayName="costList">
+      <div *ngFor="let clist of costList.controls; let i=index">
+        <div [formGroupName]="i">
+          PizzaSize
+          <input type="text" formControlName = "pizzaSize">
+          Cost
+          <input type="text" formControlName = "cost">
+        </div>
+      </div>
+      <p><button type="button" (click)= "addCostList()">Add</button></p>
+   </div>
+
+<input type="submit" value="Update Pizza" class="btn btn-success">
+</form>

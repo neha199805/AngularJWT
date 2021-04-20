@@ -1,0 +1,23 @@
+<p>pizza-byid works!</p>
+<div class="container-fluid">
+    <div class="card">
+      <div class="row m-4">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card" >
+            <img class="card-img-top" src={{pizza.imageUrl}} width = "300px" height = "300px" alt="Image Not Found">
+                <div class="card-body">
+                    <h3 class="card-title">{{pizza.name | uppercase}}</h3>
+                    <p class="card-text">{{pizza.type | uppercase}}</p> 
+                    <p class="card-text">{{pizza.description }}</p>
+                    <select>
+                        <option *ngFor = "let c of pizza.costList">
+                            {{c.pizzaSize}}, {{c.cost | currency:'INR':true}}
+                        </option> 
+                    </select>
+                </div>
+          <div class="card-footer" style="background-color:dodgerblue">
+           <button class= "btn-outline-success"(click)="onBack()">Back</button>
+          </div>
+         </div>
+        </div>
+      </div>

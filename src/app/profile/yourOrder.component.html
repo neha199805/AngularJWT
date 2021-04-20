@@ -1,3 +1,4 @@
+
 <div class="container-fluid">
     <div *ngIf="customer.orders.length; else later">
         <table border="1px">
@@ -12,7 +13,7 @@
             <div *ngFor="let p of customer.orders">
                 <tr>
                     <td>{{p.id}}</td>
-                    <td>{{p.cart}}</td>
+                    <td *ngFor="let q of p.cart">{{q.pizzaId}}</td>
                 </tr>
 
             </div>

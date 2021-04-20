@@ -1,0 +1,23 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand"><img src="https://i.pinimg.com/originals/75/08/f2/7508f2c99c0d25dc8c2510c6d5d6f82b.png" height="60px;" width="80px"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" routerLink=''>Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" routerLink='register' *ngIf="!loginService.isUserLoggedIn()">Register</a>
+        <a class="nav-item nav-link" routerLink="login" *ngIf="!loginService.isUserLoggedIn()">Login</a>
+        <a class="nav-item nav-link" routerLink="view-profile" *ngIf="loginService.isUserLoggedIn()">Profile</a>
+        <a class="nav-item nav-link" routerLink="my-orders" *ngIf="loginService.isUserLoggedIn()">My Orders</a>
+        <li class="nav-item"><a class="nav-link" routerLink='pizzas'>Pizza</a></li>
+
+        <li class="nav-item"><a class="nav-link" routerLink='cart'>Cart</a></li>
+        
+        <a *ngIf="loginService.isUserLoggedIn()" routerLink="logout" class="nav-link">LogOut</a>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,63 @@
+<!-- <p>list-pizza works!</p>-->
+
+<div class="container">
+  <div class="card">
+    
+    <div class="row">  
+      <!-- <div *ngFor = "let pizza of pizzaList"> -->
+      <div class="col-sm-6 col-lg-3" *ngFor = "let pizza of pizzaList">
+        <div class="card">
+    
+      <img class="card-img-top" 
+      src={{pizza.imageUrl}}
+      width = "300px"
+      height = "300px" 
+      alt="Image Not Found">
+      <div class="card-body">
+          <div class="card-text text-center">
+            <strong>{{pizza.name }}</strong>
+          </div>
+          <div class="row mt-1 d-flex flex-row justify-content-between">
+
+            <div class="medium text-muted">
+              <span class="card-text badge badge-success">{{pizza.type}}</span>
+            </div>
+            <div class="small">
+              <i class="material-icons mr-2">local_shipping</i>
+              <span class="badge badge-primary">Free</span>
+            </div>
+
+          </div>
+            <p class="card-text text-muted">{{pizza.description }}</p>
+            <div class="row small">
+              <h5>Select quantity    </h5>
+              <span>
+              <input type="number" [(ngModel)]="quantity" min="1" max="4" default="0"/>
+            </span>
+          <div>
+            <span>
+              <button 
+              type="button"
+              class="btn btn-sm btn-outline-info"
+              id="size"
+              *ngFor = "let c of pizza.costList"
+              (click) = 'sizeClicked(c.pizzaSize,c.cost)'>
+              <span>
+              {{c.pizzaSize}}, {{c.cost | currency:'INR':true}}
+              </span>
+              </button>
+            </span> 
+            <div class="card-footer text-center">
+            <button 
+            id = "button"
+            type = "submit"
+            class ="btn btn-md btn-block btn-outline-danger" 
+            (click)="addToCart(pizza.id,quantity)"> 
+            Add to cart
+          </button>
+          </div>
+          </div>
+          </div>
+        </div>
+        </div>
+        </div>

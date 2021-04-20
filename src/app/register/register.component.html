@@ -1,25 +1,38 @@
-<div class="col-md-6 user-container">
-    <h2 class="text-center">Register</h2>
-    <form #Form1="ngForm"  (ngSubmit)="addCustomer(Form1)">
-      <div class="form-group">
-        <label for="name">User Name:</label>
-        <input type="text" [(ngModel)]="customer.name" placeholder="name" name="name" class="form-control" id="name" >
-      </div>
-    
-      <div class="form-group">
-        <label for="Password">Password</label>
-        <input  [(ngModel)]="customer.password" type="password" placeholder="password" name="password" class="form-control" id="password">
-      </div>
-      <div class="form-group">
-        <label for="Password">Email</label>
-        <input  [(ngModel)]="customer.email" type="email" placeholder="email" name="email" class="form-control" id="email">
-      </div>
+<div class="form_wrapper">
+  <div class="form_container">
+    <div class="title_container">
+      <h2>Register</h2>
+    </div>
+    <div class="">
+      <div class="">
+        <form #form1="ngForm" (ngSubmit)="addCustomer(form1)">
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+            <input type="email" name="email" [(ngModel)]="customer.email" placeholder="Email" required />
+          </div>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+            <input type="password" name="password" [(ngModel)]="customer.password" placeholder="Password" required />
+          </div>
+          <div class="">
+            
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                <input type="text" name="name" [(ngModel)]="customer.name" placeholder="User Name" />
+              </div>
+            
+            
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                <input type="text" name="address" placeholder="Address" [(ngModel)]="customer.address" required />
+              </div>
 
-      <div class="form-group">
-        <label for="Password">Address</label>
-        <input  [(ngModel)]="customer.address" type="text" placeholder="address" name="address" class="form-control" id="address">
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                <input type="text" name="mobileNumber" placeholder="Mobile Number" [(ngModel)]="customer.mobileNumber" required />
+              </div>
+            
+          </div>
+            
+            
+          <input class="button" type="submit" value="Register" />
+        </form>
       </div>
-
-      <input type="submit" value="Register" class="btn btn-success">
-    </form>
+    </div>
   </div>
+</div>

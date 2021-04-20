@@ -1,0 +1,19 @@
+<p>order-list1 works!</p>
+<table border="1">
+    <thead></thead>
+    <tr>
+      <th>Customer Name</th>
+      <th>Type</th>
+      <th>Date of Orders</th>
+      <th>Total Cost</th>
+      </tr>
+    
+    <tbody>
+        <tr *ngFor="let order of orders">
+            <td>{{order.customer}}</td>
+            <td>{{order.transactionMode}}</td>
+            </tr>
+    </tbody>
+    
+      </table>
+      

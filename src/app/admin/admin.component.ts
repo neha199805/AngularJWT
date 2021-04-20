@@ -18,4 +18,15 @@ export class AdminComponent implements OnInit {
 
   }
 
+  gotoPizza(){
+    this.router.navigate(['admin/pizzas'])
+  }
+
+  goToOrder(){
+    this.router.navigate(['admin/orders'])
+  }
+  goToCustomer()
+  {
+    this.router.navigate(['admin/customers'])
+  }
 }

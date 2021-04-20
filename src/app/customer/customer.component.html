@@ -13,10 +13,8 @@
             <td>{{customer.name}}</td>
             <td>{{customer.email}}</td>
             <td *ngFor="let order of customer.orders">{{order.transactionMode}}</td>
-            <td *ngFor="let order of customer.orders">{{order.type}}</td>
-            <td *ngFor="let order of customer.orders">{{order.totalCost}}
-              <p *ngFor="let cart of order.cart">{{cart.pizzaSize}}</p>
-            </td>
+            <!-- //<td *ngFor="let order of customer.orders">{{order.type}}</td>
+            //<td *ngFor="let order of customer.orders">{{order.totalCost}} -->
                
             </tr>
     </tbody>

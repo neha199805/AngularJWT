@@ -1,0 +1,35 @@
+<div class="container py-5">
+    <!-- For Demo Purpose-->
+
+    <div class="row pb-5 mb-4">
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" *ngFor="let pizza of vegPizza">
+            <!-- Card-->
+            <div class="card rounded shadow-sm border-0">
+                <div class="card-body p-4"><img src={{pizza.imageUrl}}>
+                    <h5> <a class="text-dark">{{pizza.name}}</a></h5>
+                    <p class="small text-muted font-italic">{{pizza.description}}
+                    </p>
+                    <div class="row small">
+                        <h5>Select quantity </h5>
+                        <span>
+                            <input type="number" [(ngModel)]="quantity" min="1" max="4" default="0" />
+                        </span>
+                        <div>
+                            <span>
+                                <button type="button" class="btn btn-sm btn-outline-info" id="size"
+                                    *ngFor="let c of pizza.costList" (click)='sizeClicked(c.pizzaSize,c.cost)'>
+                                    <span>
+                                        {{c.pizzaSize}}, {{c.cost | currency:'INR':true}}
+                                    </span>
+                                </button>
+                            </span>
+                        </div>
+                        <div class="card-footer text-center">
+                            <button id="button" type="submit" class="btn btn-md btn-block btn-outline-danger"
+                                (click)="addToCart(pizza.id,quantity)">
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>

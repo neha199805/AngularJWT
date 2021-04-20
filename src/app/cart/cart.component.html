@@ -1,0 +1,27 @@
+
+<div *ngIf="cartItems.length; else later"  >
+    <div class="card-body" *ngFor="let cart of cart">
+      <span>Pizza size selected
+      <p class="card-text">{{cart.pizzaSize}}</span>
+       <span> Quantity selected: {{cart.quantity}}</span>
+    </div>
+<form (submit)="onSubmit()">
+  <div>
+      <input type="radio"
+       [(ngModel)]="transactionMode"
+        value="CASH" 
+        name="transactionMode" 
+        id="transactionMode">CASH
+  </div>
+  <div>
+  <input  [(ngModel)]="transactionMode" type="radio" value="CARD"  name="transactionMode" id="transactionMode">CARD
+  </div>
+  <div>
+  <input  [(ngModel)]="transactionMode" type="radio" value="ONLINE" name="transactionMode" id="transactionMode">ONLINE
+  </div>
+  <input type="submit" name="placeOrder" value="Place Order">
+</form>
+</div>
+<ng-template #later>
+  <p>Your Cart is Empty</p>
+</ng-template>

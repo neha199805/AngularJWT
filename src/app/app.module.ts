@@ -21,6 +21,18 @@ import { AdminAddCouponComponent } from './admin/coupon/add-coupon.component';
 import { EditProfileComponent } from './profile/edit-profile.component';
 import { ViewProfileComponent } from './profile/view-profile.component';
 import { YourOrderListComponent } from './profile/yourOrder.component';
+import { AddPizzaComponent } from './admin/pizza/add-pizza.component';
+import { UpdatePizzaComponent } from './admin/pizza/update-pizza.component';
+import { AdminPizzaListComponent } from './admin/pizza/pizza.component';
+import { CartComponent } from './cart/cart.component';
+import { PizzaByidComponent } from './admin/pizza/pizza-byid.component';
+import { ListPizzaComponent } from './pizza/list-pizza.component';
+import { OrderList1Component } from './admin/order/order-list1.component';
+import { CustomerList1Component } from './admin/customer-list1/customer-list1.component';
+import { NavBarComponent } from './navBar/navbar.component';
+import { AdminNavBarComponent } from './navBar/admin-navbar.component';
+import { PizzaByTypeComponent } from './pizza/list-pizza-type.component';
+import { ThankYouPageComponent } from './thank-you/thankyou-page.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +51,20 @@ import { YourOrderListComponent } from './profile/yourOrder.component';
     AdminAddCouponComponent,
     EditProfileComponent,
     ViewProfileComponent,
-    YourOrderListComponent
+    YourOrderListComponent,
+    AddPizzaComponent,
+    UpdatePizzaComponent,
+    AdminPizzaListComponent,
+    CartComponent,
+    PizzaByidComponent,
+    ListPizzaComponent,
+    OrderList1Component,
+    CustomerList1Component,
+    NavBarComponent,
+    AdminNavBarComponent,
+    PizzaByTypeComponent,
+    ThankYouPageComponent
+
   ],
   imports: [
     BrowserModule,

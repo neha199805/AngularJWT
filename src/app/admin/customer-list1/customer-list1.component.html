@@ -1,0 +1,19 @@
+<table border="1">
+    <thead></thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      </tr>
+    
+    <tbody>
+        <tr *ngFor="let customer of customers">
+            <td>{{customer.name}}</td>
+            <td>{{customer.email}}</td>
+            </tr>
+    </tbody>
+      </table>
+      <div class="card-footer" style="background-color:dodgerblue">
+        <button class= "btn-outline-success"(click)="onBack()">Back</button>
+  
+        </div>
+      
